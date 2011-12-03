@@ -1,0 +1,154 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  height:100%;
+}
+div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline;
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  font: normal 13px/1.25 "lucida grande",tahoma,verdana,arial,sans-serif;
+  color: #333;
+  -webkit-text-size-adjust: none;
+  direction: ltr;
+  background-color:#F8F8F8;
+}
+ol, ul {
+  list-style: none;
+}
+#mainWraper{
+  width:980px;
+  margin: 0 auto;
+  position: relative;
+}
+.header{
+  text-align:center;
+  padding-top:20px;
+}
+#content{
+  width:930px;
+  margin:40px auto 140px;
+  border:1px solid #BABAC2;
+  padding:20px;
+  background-color:#FFF;
+  box-shadow: 0 0px 5px rgba(100,100,100, 0.3);
+  min-height:500px;
+  font-family: 'Poly',"lucida grande",tahoma,verdana,arial,sans-serif;
+}
+#content .contentHeader{
+  margin-bottom:10px;
+}
+.footer{
+  bottom: 0;
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+  left:0;
+  right:0;
+  border-top: 1px solid #B6C4D8;
+  -moz-box-shadow:  0 0px 10px rgba(0, 0, 0, 0.4); 
+  -webkit-box-shadow:  0 0px 10px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0px 10px rgba(0, 0, 0, 0.4);
+}
+.footerInner{
+  height:80px;
+  background-color:#FFF;
+}
+.bubble{
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  padding:10px;
+  border:1px solid #CCC;
+  position: relative;
+}
+.pointWrap{
+  height: 14px;
+  width:7px;
+  position: absolute;
+  z-index: 1;
+}
+.pointWrap.left{
+  left:-8px;
+  top:10px;
+}
+.pointWrap.bottom{
+  left:10px;
+  bottom:-8px;
+  height: 7px;
+  width:14px;
+}
+.contentHeader .pointWrap.bottom{
+  left:600px;
+}
+.pointWrap .pointOuter{
+  position: absolute;
+  z-index: 1; 
+}
+.pointWrap.left .pointOuter{
+  border-color: transparent #CFCFCF transparent transparent;
+  border-style: solid solid solid none;
+  border-width: 7px 7px 7px 0;
+  left: 0;
+  top:0;
+}
+.pointWrap.bottom .pointOuter{
+  border-color: #CFCFCF transparent transparent;
+  border-style: solid solid none;
+  border-width: 7px 7px 0;
+  left: 0;
+  bottom:0;
+}
+.pointWrap .pointInner{
+  z-index: 1;
+  position: absolute;
+}
+.pointWrap.left .pointInner{
+  border-color: transparent #FFFFFF transparent transparent;
+  border-style: solid solid solid none;
+  border-width: 6px 6px 6px 0;
+  left: 2px;
+  top:-6px;
+}
+.pointWrap.bottom .pointInner{
+  border-color: #FFFFFF transparent transparent;
+  border-style: solid solid none;
+  border-width: 6px 6px 0;
+  left:-6px;
+  bottom:2px;
+}
+h1.title{
+  font: normal 62px/1.5 'Righteous',sans-serif;
+  color:#444;
+  text-shadow: 0px 2px 0px #FFF;
+}
+div.aboutMe .myPicWrap{
+  float:left;
+  width:300px;
+  padding:4px 4px 6px;
+  border:1px solid #B6C4D8;
+  box-shadow: 0 0px 3px rgba(0, 0, 0, 0.3);
+}
+div.aboutMe .about{
+  margin:0 0 20px 330px;
+  font-size:20px;
+  line-height:150%;
+}
+div.aboutMe .about a{
+  text-decoration:none;
+  color:#0059A0;
+}
+div.aboutMe .about dl{
+  margin:5px 0;
+}
+div.aboutMe .about dd{
+  padding-left:10px;
+  color:#666;
+  font-size:18px;
+}
