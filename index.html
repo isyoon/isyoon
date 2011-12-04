@@ -7,6 +7,7 @@
     <link rel="stylesheet" type="text/css" href="/css/main.css" media="screen" />
     <link href='http://fonts.googleapis.com/css?family=Righteous|Droid+Sans:400,700' rel='stylesheet' type='text/css'>
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://www.google.com/jsapi?autoload=%7B%22modules%22%3A%5B%7B%22name%22%3A%22visualization%22%2C%22version%22%3A%221%22%2C%22packages%22%3A%5B%22corechart%22%5D%7D%5D%7D"></script>
   </head>
   <body>
     <div id="mainWraper">
@@ -392,6 +393,14 @@
               </div>
             </section>
             <section class="portfolios">
+              <header class="title">
+                <h3>Portfolios &amp; Skills</h3>
+                <div class="pointWrap bottom">
+                    <div class="pointOuter">
+                      <div class="pointInner"> </div>
+                    </div>
+                  </div>
+              </header>
               <div class="portfolio">
                 <div class="describe bubble">
                   <header>
@@ -420,7 +429,7 @@
               <div class="portfolio">
                 <div class="describe bubble">
                   <header>
-                    <span class="tag">Created</span> on May 2011
+                    <span class="tag">Contributed</span> on May 2011
                   </header>
                   <article>
                     <ul>
@@ -447,7 +456,7 @@
                   </header>
                   <article>
                     <ul>
-                      <li>M32 (<a href="https://github.com/spring-sprout/jco-2011-realtime" target="_blank">Source</a>)</li>
+                      <li>M32 - Memento (<a href="https://github.com/isyoon/m32" target="_blank">Source</a>)</li>
                       <li>2nd place in Daum 10th DevDay</li>
                       <li>Directions preview</li>
                       <li>with <span class="tag" title="SpringSprout JavaScript Team">SSJS Team</span></li>
@@ -455,10 +464,11 @@
                         <ul class="disc">
                           <li>Java1.6</li>
                           <li>Oracle XE</li>
-                          <li>jQuery1.6</li>
+                          <li>jQuery1.4.2</li>
                           <li>Daum Map API</li>
                         </ul>
                       </li>
+                      <li><a href="/assets/m32.swf" target="_blank" alt="Demo video">View demo video</a></li>
                     </ul>  
                   </article>
                 </div>
@@ -482,10 +492,41 @@
                         </ul>
                       </li>
                       <li>
-                        Deom video
+                        <strong>Demo video</strong>
                         <iframe width="320" height="215" src="http://www.youtube.com/embed/lHMWcdQJH1o?wmode=transparent" frameborder="0" allowfullscreen></iframe>
                       </li>
                     </ul>  
+                  </article>
+                </div>
+              </div>
+              <div class="portfolio">
+                <div class="describe bubble">
+                  <header>
+                    <span class="tag">Award</span> on Nobember 2009
+                  </header>
+                  <article>
+                    <ul>
+                      <li>Wordassist - Daum Open Editor Plugin (<a href="https://github.com/helols/wordassist" target="_blank">Source</a>)</li>
+                      <li>1nd place in Daum 9th DevDay and DevDay EvP</li>
+                      <li>with <span class="tag" title="SpringSprout JavaScript Team">SSJS Team</span></li>
+                      <li class="usedSkill">
+                        <ul class="disc">
+                          <li>Daum Open Editor</li>
+                          <li>Daum Dic API, Google Dic API</li>
+                        </ul>
+                      </li>
+                      <li>
+                        <strong>Demo image</strong>
+                        <img src="http://farm3.staticflickr.com/2800/4175018795_d19d40e602.jpg" alt="demo image" width="320">
+                      </li>
+                    </ul>  
+                  </article>
+                </div>
+              </div>
+              <div class="portfolio">
+                <div class="describe bubble">
+                  <article>
+                    <div id="skillsChart"></div>
                   </article>
                 </div>
               </div>

@@ -64,7 +64,7 @@ a{
   box-shadow: 0 0px 10px rgba(0, 0, 0, 0.4);
 }
 .footerInner{
-  height:80px;
+  height:60px;
   background-color:#FFF;
 }
 .bubble{
@@ -148,6 +148,12 @@ a{
   left:-6px;
   bottom:2px;
 }
+#timeLine .portfolios .title .pointWrap.bottom .pointOuter{
+  border-color: #DFDFDF transparent transparent;
+}
+#timeLine .portfolios .title .pointWrap.bottom .pointInner{
+  bottom:3px;
+}
 .tag{
   display:inline-block;
   margin:3px 1px;
@@ -227,11 +233,23 @@ li.usedSkill{
   margin-left:550px;
   padding-top:10px;
 }
+#timeLine .portfolios .title{
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  padding:10px;
+  border:2px solid #DFDFDF;
+  margin-bottom:10px;
+  font-family:'lucida grande',sans-serif;
+  color:#444;
+  text-shadow: 1px 3px 0 #FFF;
+  position:relative;
+}
 #timeLine .portfolios .describe{
   -moz-box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
   -webkit-box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
   box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
-  border-color:#CFCFCF;
+  border-color:#DFDFDF;
 }
 #timeLine .timePoint img{
   background:transparent url('/img/points.png') no-repeat scroll 0 0;
