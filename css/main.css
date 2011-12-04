@@ -1,7 +1,6 @@
 html, body {
   margin: 0;
   padding: 0;
-  height:100%;
 }
 div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
   margin: 0;
@@ -22,6 +21,13 @@ body {
 ol, ul {
   list-style: none;
 }
+.quote{
+  font: 18px/1 Georgia, arial, sans-serif;
+}
+a{
+  text-decoration:none;
+  color:#0059A0;
+}
 #mainWraper{
   width:980px;
   margin: 0 auto;
@@ -37,12 +43,13 @@ ol, ul {
   border:1px solid #BABAC2;
   padding:20px;
   background-color:#FFF;
+  -moz-box-shadow: 0 0px 5px rgba(100,100,100, 0.3);
+  -webkit-box-shadow: 0 0px 5px rgba(100,100,100, 0.3);
   box-shadow: 0 0px 5px rgba(100,100,100, 0.3);
-  min-height:500px;
-  font-family: 'Poly',"lucida grande",tahoma,verdana,arial,sans-serif;
+  font-family:'Droid Sans',"lucida grande",tahoma,verdana,arial,sans-serif;
 }
 #content .contentHeader{
-  margin-bottom:10px;
+  margin-bottom:20px;
 }
 .footer{
   bottom: 0;
@@ -78,6 +85,10 @@ ol, ul {
   left:-8px;
   top:10px;
 }
+.pointWrap.right{
+  right:-8px;
+  top:10px;
+}
 .pointWrap.bottom{
   left:10px;
   bottom:-8px;
@@ -85,7 +96,7 @@ ol, ul {
   width:14px;
 }
 .contentHeader .pointWrap.bottom{
-  left:600px;
+  left:550px;
 }
 .pointWrap .pointOuter{
   position: absolute;
@@ -95,6 +106,13 @@ ol, ul {
   border-color: transparent #CFCFCF transparent transparent;
   border-style: solid solid solid none;
   border-width: 7px 7px 7px 0;
+  left: 0;
+  top:0;
+}
+.pointWrap.right .pointOuter{
+  border-color: transparent transparent transparent #CFCFCF;
+  border-style: solid none solid solid ;
+  border-width: 7px 0 7px 7px;
   left: 0;
   top:0;
 }
@@ -116,6 +134,13 @@ ol, ul {
   left: 2px;
   top:-6px;
 }
+.pointWrap.right .pointInner{
+  border-color: transparent transparent transparent #FFFFFF;
+  border-style: solid none solid solid;
+  border-width: 6px 0 6px 6px;
+  left:-8px;
+  top:-6px;
+}
 .pointWrap.bottom .pointInner{
   border-color: #FFFFFF transparent transparent;
   border-style: solid solid none;
@@ -123,26 +148,36 @@ ol, ul {
   left:-6px;
   bottom:2px;
 }
+.tag{
+  display:inline-block;
+  margin:3px 1px;
+  padding:1px 3px;
+  background-color:#F8F8F8;
+  border:1px solid #DEDEDE;
+  font-weight:bold;
+  color:#666;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+}
 h1.title{
   font: normal 62px/1.5 'Righteous',sans-serif;
   color:#444;
-  text-shadow: 0px 2px 0px #FFF;
+  text-shadow: 1px 3px 0 #FFF;
 }
 div.aboutMe .myPicWrap{
   float:left;
   width:300px;
   padding:4px 4px 6px;
   border:1px solid #B6C4D8;
-  box-shadow: 0 0px 3px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
 }
 div.aboutMe .about{
   margin:0 0 20px 330px;
-  font-size:20px;
+  font-size:18px;
   line-height:150%;
-}
-div.aboutMe .about a{
-  text-decoration:none;
-  color:#0059A0;
 }
 div.aboutMe .about dl{
   margin:5px 0;
@@ -150,5 +185,66 @@ div.aboutMe .about dl{
 div.aboutMe .about dd{
   padding-left:10px;
   color:#666;
-  font-size:18px;
+  font-size:16px;
+}
+ul.disc >li{
+  list-style: disc outside;
+}
+li.usedSkill{
+  padding:5px 0 0 20px;
+}
+#timeLine{
+  overflow:hidden;
+  background:transparent url('/img/stem.png') repeat-y scroll 554px 0;
+  padding:15px 0;
+}
+#timeLine .timeDescribes{
+  float:left;
+  width:566px;
+}
+#timeLine .portfolios{
+  margin-left:576px;
+}  
+#timeLine .timeDescribes .timeDescribe,
+#timeLine .portfolios .portfolio{
+  overflow:hidden;
+  margin-bottom:20px;
+}
+#timeLine .timeDescribes .describe{
+  float:left;
+  width:518px;
+  -moz-box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
+}
+#timeLine .timeDescribes .describe header,
+#timeLine .portfolios .describe header{
+  padding:0 5px 5px;
+  border-bottom:1px solid #B8B8B8;
+  margin-bottom:10px;
+}  
+#timeLine .timeDescribes .timePoint{
+  margin-left:550px;
+  padding-top:10px;
+}
+#timeLine .portfolios .describe{
+  -moz-box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
+}
+#timeLine .timePoint img{
+  background:transparent url('/img/points.png') no-repeat scroll 0 0;
+}
+#timeLine .timePoint img.bron{
+  background-position:0 0;
+}
+#timeLine .timePoint img.education{
+  background-position:0 -70px;
+}
+#timeLine .timePoint img.experience{
+  background-position:0 -35px;
+}
+.gMapsCanvas{
+  height:250px;
+  width:100%;
 }
