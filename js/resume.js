@@ -3,7 +3,7 @@ var Resume = function(){
       that = {
     init : function(options){
       maps = options.maps;
-      google.setOnLoadCallback(that.drawSkills);
+      that.drawSkills(options.skills);
       return that;
     },
     printMaps : function(){
@@ -36,24 +36,29 @@ var Resume = function(){
       return that;
     },
    
-    drawSkills : function(){
-      var data = new google.visualization.DataTable();
-        data.addColumn('string', 'Year');
-        data.addColumn('number', 'Skill');
-        data.addRows(4);
-        data.setValue(0, 0, 'JS');
-        data.setValue(0, 1, 8);
-        data.setValue(2, 0, 'HTML/CSS');
-        data.setValue(1, 1, 8);
-        data.setValue(1, 0, 'JAVA');
-        data.setValue(2, 1, 5);
-        data.setValue(3, 0, 'SQL');
-        data.setValue(3, 1, 5);
-
-        var chart = new google.visualization.BarChart(document.getElementById('skillsChart'));
-        chart.draw(data, {width: 320, height: 240, title: 'Yoon\'s skills',
-                          vAxis: {title: 'Skills'}
-                         });
+    drawSkills : function(skills){
+      var params = {
+        cht   : 'bhs',
+        chs   : '320x250',
+        chbh  : 'a,8',
+        chdlp : 'bv',
+        chco  : '4D89F9',
+        chdl  : 'Years',
+        chxt  : 'y,x',
+        chxr  : '1,0,8',
+        chds  : '0,8',
+        chm   : ',,0,-1,10,0',
+        chtt  : 'Yoon`s skills',
+        chxl  : '0:',
+        chd   : 't:'
+      };
+      var years = [];
+      $.each(skills,function(idx,item){
+        params.chxl += ('|'+item[0]);
+        years.push(item[1]);
+      });
+      params.chd += years.reverse().join(',');
+      $('#skillsChart').attr('src','http://chart.apis.google.com/chart?'+$.param(params));
     }
   }
   return that;
