@@ -16,7 +16,7 @@ body {
   color: #333;
   -webkit-text-size-adjust: none;
   direction: ltr;
-  background-color:#F8F8F8;
+  background:url('/img/bg.png') repeat scroll 0 0;
 }
 ol, ul {
   list-style: none;
@@ -39,7 +39,7 @@ a{
 }
 #content{
   width:930px;
-  margin:40px auto 140px;
+  margin:40px auto 15px;
   border:1px solid #BABAC2;
   padding:20px;
   background-color:#FFF;
@@ -50,6 +50,12 @@ a{
 }
 #content .contentHeader{
   margin-bottom:20px;
+}
+.contentBottom{
+  margin:20px 0;
+  text-align:center;
+  font-size:12px;
+  color:#666;
 }
 .footer{
   bottom: 0;
@@ -159,12 +165,21 @@ a{
   margin:3px 1px;
   padding:1px 3px;
   background-color:#F8F8F8;
-  border:1px solid #DEDEDE;
+  border:1px solid #CECECE;
   font-weight:bold;
   color:#666;
   -moz-border-radius: 2px;
   -webkit-border-radius: 2px;
   border-radius: 2px;
+}
+.tag.point{
+  background-color:#FFFF99;
+}
+img.forkme{
+  position: absolute; 
+  top: 0; 
+  right: 0; 
+  border: 0;
 }
 h1.title{
   font: normal 62px/1.5 'Righteous',sans-serif;
@@ -255,13 +270,13 @@ li.usedSkill{
   background:transparent url('/img/points.png') no-repeat scroll 0 0;
 }
 #timeLine .timePoint img.bron{
-  background-position:0 0;
+  background-position:0 -35px;
 }
 #timeLine .timePoint img.education{
-  background-position:0 -70px;
+  background-position:0 -105px;
 }
 #timeLine .timePoint img.experience{
-  background-position:0 -35px;
+  background-position:0 -140px;
 }
 .gMapsCanvas{
   height:250px;
